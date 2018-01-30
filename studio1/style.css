@@ -1,0 +1,92 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  width: 100%;
+  margin: 30px auto;
+  font-size: 100%;
+  max-width: 1000px;
+  background-color: gold;
+}
+input{
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 12pt;
+}
+button{
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14pt;
+}
+a{
+  font-family: 'Ubuntu Mono', monospace;
+  text-decoration: none;
+}
+h1{
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 40pt;
+  color: white;
+  margin-left: 0%;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+li{
+  font-family: 'Ubuntu Mono', monospace;
+}
+footer{
+  position: fixed;
+  width: 100%;
+  max-width: 800px;
+  bottom: 0;
+}
+footer ul{
+  list-style: none;
+}
+footer li a{
+  color:black;
+  text-decoration:underline;
+}
+footer li{
+  float: left;
+}
+
+
+#textboxs{
+  float: left;
+}
+#textboxs ul{
+  list-style: none;
+}
+#buttons{
+  float: left;
+  margin-top: 10px;
+}
+#sketch{
+  display: block;
+  float: right;
+  margin-right: 0px;
+  margin-top: 0px;
+  width: 100%;
+  max-width: 350px;
+}
+
+#input{
+  float: left;
+  width: 30%;
+  display: block;
+  max-width: 250px;
+}
+#results{
+  float:left;
+  width: 33%;
+  line-height: 25px;
+  margin-top: 50px;
+}
+input{
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+#myMsg{
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14pt;
+}
