@@ -21,7 +21,7 @@ a{
   font-family: 'Ubuntu Mono', monospace;
   text-decoration: none;
 }
-h1{
+h2{
   font-family: 'Ubuntu Mono', monospace;
   font-size: 40pt;
   color: white;
@@ -29,8 +29,9 @@ h1{
   margin-top: 80px;
   margin-bottom: 10px;
 }
-li{
+div{
   font-family: 'Ubuntu Mono', monospace;
+  max-width: 200px;
 }
 footer{
   position: fixed;
@@ -52,10 +53,9 @@ footer li{
 
 #textboxs{
   float: left;
-}
-#textboxs ul{
   list-style: none;
 }
+
 #buttons{
   float: left;
   margin-top: 10px;
