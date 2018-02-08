@@ -1,0 +1,363 @@
+
+@media only screen and (max-width: 768px){
+  * {
+    margin: 0px;
+    padding: 0px;;
+  }
+  body{
+    width:100%;
+  background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  }
+  h1{
+    margin-left: 2%;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+  }
+  header{
+    position: fixed;
+    padding-top: 50px;
+    background-color: black;
+    width: 100%;
+    height:10%;
+  }
+  hr{
+    border-width: 1px;
+    border-style: solid;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+  }
+  footer li{
+    float: left;
+    padding-left: 8%;
+  }
+  footer li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 13pt;
+  }
+  #chocolate{
+width: 40%;
+height: 40%;
+padding-top: 30%;
+display: block;
+margin: auto;
+  }
+  #chocolateSection:hover{
+    background-color: rgba(255, 0, 0, 0.3);
+    height: 80%;
+    padding-top: 6%;
+  }
+  #pen{
+height: 40%;
+  width: 40%;
+  display: block;
+  margin: auto;
+  }
+  #penSection:hover{
+      background-color: rgba(0, 255, 0, 0.3);
+        height: 80%;
+        padding-left: 5%;
+  }
+  #penOverlaySection{
+    position: absolute;
+    width: 80%;
+    top:20%;
+    left: 10%;
+    height: 70%;
+    color: black;
+    font-size: 18pt;
+    display: none;
+    background-color: #9ff99f;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  #penOverlaySection p{
+    font-size: 10pt;
+    margin-left: 20%;
+    width: 70%;
+    top: 30%;
+    left: 55%;
+  }
+  #penOverlaySection img{
+
+    display: block;
+    margin: auto;
+    width:50%;
+    height: 50%;
+    left: 15%;
+    top:10%;
+  }
+  #penOverlaySection #close2{
+    position: fixed;
+    left: 11%;
+    top:20%;
+    font-size: 30pt;
+  }
+  #moneySection:hover{
+    background-color: rgba(0, 0, 255, 0.3);
+    padding-bottom: 7%;
+
+  }
+  #money{
+height: 40%;
+    width: 40%;
+  display: block;
+  margin: auto;
+
+  }
+  #moneyOverlaySection{
+    position: absolute;
+    width: 80%;
+    top:20%;
+    left: 10%;
+    height: 70%;
+    color: black;
+    font-size: 18pt;
+    display: none;
+    background-color: #9697ea;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  #chocolateOverlaySection{
+    position: absolute;
+    width: 80%;
+    top:20%;
+    left: 10%;
+    height: 70%;
+    color: black;
+    font-size: 18pt;
+    display: none;
+    background-color: #ed8989;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  #chocolateOverlaySection p{
+    font-size: 10pt;
+    margin-left: 20%;
+    width: 70%;
+    top: 30%;
+    left: 55%;
+  }
+  #moneyOverlaySection p{
+    font-size: 10pt;
+    margin-left: 20%;
+    width: 70%;
+    top: 30%;
+    left: 55%;
+  }
+  #chocolateOverlaySection img{
+
+    display: block;
+    margin: auto;
+    width:50%;
+    height: 50%;
+    left: 15%;
+    top:10%;
+  }
+  #moneyOverlaySection img{
+
+    display: block;
+    margin: auto;
+    width:70%;
+    height: 40%;
+    left: 15%;
+    top:22%;
+  }
+
+  #chocolateOverlaySection #close{
+    position: fixed;
+    left: 11%;
+    top:20%;
+    font-size: 30pt;
+  }
+  #moneyOverlaySection #close3{
+    position: fixed;
+    left: 11%;
+    top:20%;
+    font-size: 30pt;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;;
+  }
+
+  body{
+    font-size: 15pt;
+    width:100%;
+  background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  }
+
+  h1{
+    margin-left: 8%;
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  header{
+    padding-top: 50px;
+    background-color: black;
+  }
+  hr{
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+  }
+  footer li{
+    float: left;
+    padding-left: 8%;
+  }
+  footer li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 13pt;
+  }
+  #chocolateSection{
+    position: fixed;
+   width:30%;
+    left: 65%;
+  }
+  #chocolateSection:hover{
+    background-color: rgba(255, 0, 0, 0.3);
+    height: 80%;
+    padding-right: 6%;
+  }
+  #penSection{
+    position: fixed;
+  width:30%;
+    right: 67%;
+
+  }
+  #penSection:hover{
+      background-color: rgba(0, 255, 0, 0.3);
+        height: 80%;
+        padding-left: 5%;
+  }
+  #penOverlaySection{
+    position: absolute;
+    width: 80%;
+    top:10%;
+    left: 10%;
+    height: 80%;
+    color: black;
+    font-size: 18pt;
+    display: none;
+    background-color: #9ff99f;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  #penOverlaySection p{
+    position: fixed;
+    line-height: 30px;
+      width:30%;
+    top: 30%;
+    left: 55%;
+  }
+  #penOverlaySection img{
+    position: fixed;
+    left: 15%;
+    top:10%;
+  }
+  #penOverlaySection #close2{
+    position: fixed;
+    left: 11%;
+    top:10%;
+    font-size: 30pt;
+  }
+  #moneySection:hover{
+    background-color: rgba(0, 0, 255, 0.3);
+      height:70%;
+
+  }
+  #moneySection{
+    position: fixed;
+    padding-top: 150px;
+    width:30%;
+    right: 38%;
+  }
+  #moneyOverlaySection{
+    position: absolute;
+    width: 80%;
+    top:10%;
+    left: 10%;
+    height: 80%;
+    color: black;
+    font-size: 18pt;
+    display: none;
+    background-color: #9697ea;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  #chocolateOverlaySection{
+    position: absolute;
+    width: 80%;
+    top:10%;
+    left: 10%;
+    height: 80%;
+    color: black;
+    font-size: 18pt;
+    display: none;
+    background-color: #ed8989;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  #chocolateOverlaySection p{
+    position: fixed;
+    line-height: 30px;
+    width:30%;
+    top: 30%;
+    left: 55%;
+  }
+  #moneyOverlaySection p{
+    position: fixed;
+    line-height: 30px;
+      width:30%;
+    top: 30%;
+    left: 55%;
+  }
+  #chocolateOverlaySection img{
+    position: fixed;
+    left: 15%;
+    top:10%;
+  }
+  #moneyOverlaySection img{
+    position: fixed;
+    left: 15%;
+    top:22%;
+  }
+
+  #chocolateOverlaySection #close{
+    position: fixed;
+    left: 11%;
+    top:10%;
+    font-size: 30pt;
+  }
+  #moneyOverlaySection #close3{
+    position: fixed;
+    left: 11%;
+    top:10%;
+    font-size: 30pt;
+  }
+
+
+}
