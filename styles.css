@@ -47,6 +47,11 @@ h1 {
   width: 50%;
   margin-top: 40px;
 }
+#col3{
+  float: left;
+  width: 50%;
+  margin-top: -220px;
+}
 .category{
   font-size: 18pt;
   padding: 30px 0px 10px 0px;
