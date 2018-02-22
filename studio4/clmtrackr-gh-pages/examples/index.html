@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Meet Me At The Library</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Titillium+Web" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/clmtrackr@1.1.2/build/clmtrackr.min.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/utils.js"></script>
+  <script src="../build/clmtrackr.js"></script>
+  <script src="../models/model_pca_20_svm.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/Stats.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/d3.min.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/emotion_classifier.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/emotionmodel.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/webgl-utils.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/face_deformer.js"></script>
+    <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/dat.gui.min.js"></script>
+
+
+		<script src="./js/libs/webgl-utils.js"></script>
+		<script src="../build/clmtrackr.js"></script>
+		<script src="../models/model_pca_20_svm.js"></script>
+
+</head>
+<div id="content">
+    <h1>Meet Me At The Library</h1>
+    <hr>
+  </div>
+    <div id="container">
+      <video id="videoel" width="500" height="400" preload="auto" loop playsinline autoplay>
+      </video>
+      <canvas id="overlay" width="500" height="400"></canvas>
+      <canvas id="webgl" width="400" height="300"></canvas>
+    </div>
+
+    <div id="emotion_container">
+      <div id="emotion_icons">
+        <img class="emotion_icon" id="icon1" src="./media/icon_angry.png">
+        <img class="emotion_icon" id="icon2" src="./media/icon_sad.png">
+        <img class="emotion_icon" id="icon3" src="./media/icon_surprised.png">
+        <img class="emotion_icon" id="icon4" src="./media/icon_happy.png">
+      </div>
+      <div id='emotion_chart'></div>
+    </div>
+    <div id="controls">
+      <input class="btn" type="button" value="Loading.."  onclick="startVideo()" id="startbutton"></input>
+      <input type="button" value="Saturation" id="colorFilter"></input>
+      <input type="button" value="Hue" id="hueFilter"></input>
+      <input type="button" value="Clear" id="clear"></input>
+    </div>
+    <footer>
+    <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+  </footer>
+<body>
+
+  <script src="script.js"></script>
+  <script src="utility.js"></script>
+</body>
+<html>

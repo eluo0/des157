@@ -1,0 +1,93 @@
+
+body {
+  background-color: black;
+  margin: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 1200px;
+  font-family: 'Poiret One', cursive;
+}
+
+#overlay {
+  filter : hue-rotate(90deg); /*IE*/
+  position: fixed;
+
+}
+
+input[type=button] {
+    background-color: #d7a0ff;
+    border: none;
+    border-radius: 10%;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 4px 10px;
+    width:130px;
+    cursor: pointer;
+}
+
+
+#container {
+  margin: 0 7% 0 7%;
+
+}
+
+#content {
+  margin-left: 7%;
+  margin-top: 3%;
+  width: 93%;
+}
+
+h1 {
+  color: #ededed;
+  padding-bottom: 0px;
+}
+hr{
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 16px;
+}
+
+#controls {
+  text-align : center;
+  position: fixed;
+  bottom: 100px;
+  left: 7%;
+}
+
+#emotion_container {
+  position: fixed;
+  bottom: 12%;
+  right: 7%;
+}
+
+#emotion_icons {
+  height: 50px;
+  padding-left: 40px;
+}
+
+.emotion_icon {
+  width : 40px;
+  height : 40px;
+  margin-top: 5px;
+  padding:0px 35px 0px 0px;
+}
+
+#emotion_chart, #emotion_icons {
+  width : 40%;
+  color: white;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6 {
+  visibility : hidden;
+}
+footer{
+  position: fixed;
+  margin-left: 7%;
+  bottom: 0;
+}
+footer a{
+  color: white;
+}
