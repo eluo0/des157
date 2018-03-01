@@ -38,19 +38,20 @@ h1 {
 
 #col1 {
   float: left;
-  width: 50%;
+  width: 40%;
   margin-top: 40px;
 }
 
 #col2 {
   float: left;
-  width: 50%;
+  width: 30%;
   margin-top: 40px;
 }
 #col3{
   float: left;
-  width: 50%;
-  margin-top: -220px;
+  width: 27%;
+  margin-top: 85px;
+  text-decoration: none;
 }
 .category{
   font-size: 18pt;
