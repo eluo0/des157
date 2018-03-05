@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size:100%;
+  overflow:hidden;
+  font-family:
+}
+@keyframes scrollup {
+  from {top:100px;}
+  to {top: 0px;}
+}
+.page:target {
+  position: absolute;
+  display: block;
+  /**animation-name: scrollup;**/
+  animation-duration: 0.5s;
+}
+.page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 110%; /* so background does not show with animation */
+  width: 100%;
+  text-align: center;
+  font-size: 30vmin;
+  color:#333;
+  display:none;
+}
+
+nav {
+  position:fixed;
+  top:200px;
+  left:0px;
+  z-index:1;
+  font-size:1.5em;
+}
+
+li {
+  list-style-type:none;
+}
+
+a {
+  border: 2px #333 solid;
+  border-radius:5px;
+  width:1in;
+  padding:16px;
+  margin-bottom:4px;
+  color:#333;
+  text-decoration: none;
+  display:inline-block;
+}
+
+a:hover {
+  background-color:white;
+}
+
+#home{
+  background-color: pink;
+  display:block; /* first page shows */
+}
+
+#about {
+  background-color: DarkTurquoise;
+}
+
+#webcam {
+  background-color:IndianRed;
+}
+
+#contact {
+  background-color: Plum;
+}
+footer{
+  position: fixed;
+  width: 100%;
+  max-width: 800px;
+  bottom: 0;
+}
+footer a{
+
+}
