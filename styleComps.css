@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#col1{
+  float: left;
+  width: 40%;
+  padding-right: 135px;
+}
+#col{
+  float: left;
+    width: 40%;
+}
+p{
+  font-size: 30pt;
+}
