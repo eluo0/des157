@@ -9,7 +9,7 @@ hueFilter.addEventListener('click', hue);
 clear.addEventListener('click', clearFilter);
 
 function setup(){
-var myCanvas = createCanvas(800,300);
+var myCanvas = createCanvas(900,300);
 myCanvas.parent('canvas');
 frameRate(5);
 background("#F25757");
