@@ -9,7 +9,7 @@ hueFilter.addEventListener('click', hue);
 clear.addEventListener('click', clearFilter);
 
 function setup(){
-var myCanvas = createCanvas(900,300);
+var myCanvas = createCanvas(900,800);
 myCanvas.parent('canvas');
 frameRate(5);
 background("#F25757");
@@ -18,6 +18,7 @@ background("#F25757");
  function draw(){
 
    noFill();
+   stroke('#424141');
 
    var distance1 = random(-50,50);
    var distance2 = random(-55,43);
@@ -65,7 +66,7 @@ onePageScroll(".main", {
    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
    easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                     // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   animationTime: 800,             // AnimationTime let you define how long each section takes to animate
    pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
    updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
    beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
