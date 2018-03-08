@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="../purejs/onepage-scroll.css" rel="stylesheet">
+  <script src="../purejs/onepagescroll.js"></script>
+  <!-- Online Font Link -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <!--add link to p5 here-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clmtrackr@1.1.2/build/clmtrackr.min.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/utils.js"></script>
+  <script src="../build/clmtrackr.js"></script>
+  <script src="../models/model_pca_20_svm.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/Stats.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/d3.min.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/emotion_classifier.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/emotionmodel.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/webgl-utils.js"></script>
+  <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/face_deformer.js"></script>
+    <script src="https://unpkg.com/clmtrackr@1.1.2/examples/js/libs/dat.gui.min.js"></script>
+		<script src="./js/libs/webgl-utils.js"></script>
+		<script src="../build/clmtrackr.js"></script>
+		<script src="../models/model_pca_20_svm.js"></script>
+
+  <title>Prototype 2</title>
+</head>
+
+<body>
+
+  <div class="main">
+    <section class="page1">
+  <div id="canvas"></div>
+  <header>
+    <h1>Mooder</h1>
+    <hr>
+    <p>A mood filter website that treat people with stress and help them feel better about themselves. This project target mental health and helps prevent stress disorders.</p>
+    <p>DESIGNER | ARTIST | DEVELOPER</p>
+    <p>Elle Luo</p>
+  </header>
+</section>
+
+<section class="page2">
+  <h1>Why i do this?</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. <p>
+</section>
+
+<section class="page3">
+  <h1>See yourself in the filters</h1>
+  <div id="container">
+    <video id="videoel" width="500" height="400" preload="auto" loop playsinline autoplay>
+    </video>
+    <canvas id="overlay" width="500" height="400"></canvas>
+    <canvas id="webgl" width="400" height="300"></canvas>
+  </div>
+  <div id="emotion_container">
+    <div id="emotion_icons">
+      <img class="emotion_icon" alt="emotion_icon" id="icon1" src="./media/icon_angry.png">
+      <img class="emotion_icon"  alt="emotion_icon" id="icon2" src="./media/icon_sad.png">
+      <img class="emotion_icon"  alt="emotion_icon" id="icon3" src="./media/icon_surprised.png">
+      <img class="emotion_icon"  alt="emotion_icon" id="icon4" src="./media/icon_happy.png">
+    </div>
+    <div id='emotion_chart'></div>
+  </div>
+  <div id="controls">
+    <input class="btn" type="button" value="Loading.."  onclick="startVideo()" id="startbutton">
+    <input type="button" value="Saturation" id="colorFilter">
+    <input type="button" value="Hue" id="hueFilter">
+    <input type="button" value="Clear" id="clear">
+  </div>
+</section>
+
+<section class="page4">
+  <h1>contact</h1>
+</section>
+</div>
+
+  <footer>
+      <nav>
+        <ul>
+          <li><a href="https://validator.w3.org/check?uri=referer">Valid HTML 5\</a></li>
+          <li><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS\</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="utility.js"></script>
+
+  </body>
+
+  </html>
