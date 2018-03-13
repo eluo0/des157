@@ -12,8 +12,36 @@ body{
 #canvas{
   height: 300px;
   width: 900px;
-  margin-left:15%;
+  margin-left:20%;
+}
+#bar{
+  position: fixed;
+  width: 40px;
+  height: 235px;
+  top: 30%;
+  left: 8%;
+}
+#sadOverlay{
+position: absolute;
+display: none;
+z-index: 1;
+top: 10%;
+left: -300px;
+}
+#navigation{
+  color: white;
+  font-size: 15pt;
+  position: fixed;
+  top:30%;
+  left: 13%;
 
+}
+#navigation li{
+  padding-bottom: 50px;
+  font-weight: 700;
+}
+header{
+  position: fixed;
 }
 
 .main .page1{
@@ -30,16 +58,16 @@ body{
 }
 
 .main .page2 h1{
-  font-size: 30pt;
+  font-size: 25pt;
   color: black;
   text-decoration: line-through;
 }
 .main .page3 h1{
-  font-size: 30pt;
+  font-size: 25pt;
   color: #fff9aa;
 }
 .main .page4 h1{
-  font-size: 30pt;
+  font-size: 25pt;
   color: white;
 }
 
@@ -60,9 +88,10 @@ input[type=button] {
     cursor: pointer;
 }
 #container {
-  margin: 0 7% 0 7%;
+  margin: 1% 0 0 7%;
 
 }
+
 
 #content {
   margin-left: 7%;
