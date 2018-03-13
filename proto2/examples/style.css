@@ -21,6 +21,13 @@ body{
   top: 30%;
   left: 8%;
 }
+#sadOverlay{
+position: absolute;
+display: none;
+z-index: 1;
+top: 10%;
+left: -300px;
+}
 #navigation{
   color: white;
   font-size: 15pt;
