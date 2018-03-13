@@ -63,6 +63,7 @@
 
 <section class="page3">
   <h1>See yourself in the filters</h1>
+  <p>CLICK on the sad button last!!!!!!!!!!!</p>
   <div id="container">
     <video id="videoel" width="500" height="400" preload="auto" loop playsinline autoplay>
     </video>
@@ -80,7 +81,12 @@
   </div>
   <div id="controls">
     <input class="btn" type="button" value="Loading.."  onclick="startVideo()" id="startbutton">
-    <input type="button" value="Saturation" id="colorFilter">
+
+    <section id="sadOverlay">
+    <img src="media/sad.svg" alt="sad" width="500" height="400">
+    </section>
+    <input type="button" value="Sad" id="sadFilter">
+
     <input type="button" value="Hue" id="hueFilter">
     <input type="button" value="Clear" id="clear">
   </div>

@@ -1,12 +1,18 @@
 "use strict";
-var colorFilter = document.getElementById('colorFilter');
+var sadFilter = document.getElementById('sadFilter');
+var overlaySad = document.getElementById('sadOverlay');
 var hueFilter = document.getElementById('hueFilter');
 var clear = document.getElementById('clear');
 var webgl_overlay = document.getElementById('webgl');
 
-colorFilter.addEventListener("click", saturation);
+sadFilter.addEventListener("click", function(){
+  overlaySad.style.display="block";
+});
 hueFilter.addEventListener('click', hue);
-clear.addEventListener('click', clearFilter);
+clear.addEventListener('click', function(){
+  overlaySad.style.display="none";
+});
+
 
 function setup(){
 var myCanvas = createCanvas(900,800);
@@ -16,7 +22,6 @@ background("#F25757");
 
 }
  function draw(){
-
    noFill();
    stroke('#424141');
 
@@ -45,16 +50,16 @@ background("#F25757");
    ellipse(x1, y1,2,2);
    ellipse(x2, y2,2,2);
   ellipse(dotX-100, dotY-120,2,2);
-
 }
 function mousePressed(){
   background("#F25757");
 }
-function saturation(){
+function sad(){
   videoel.style.filter="saturate(4)";
 }
 function clearFilter(){
-  videoel.style.filter="none";
+  //videoel.style.filter="none";
+  overlaySad.style.display="none";
 }
 function hue(){
 videoel.style.filter="hue-rotate(270deg)";
