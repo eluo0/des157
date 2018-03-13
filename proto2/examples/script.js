@@ -58,8 +58,8 @@ function sad(){
   videoel.style.filter="saturate(4)";
 }
 function clearFilter(){
-  //videoel.style.filter="none";
-  overlaySad.style.display="none";
+  videoel.style.filter="none";
+  //overlaySad.style.display="none";
 }
 function hue(){
 videoel.style.filter="hue-rotate(270deg)";
