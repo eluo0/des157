@@ -20,10 +20,6 @@ var exit = Math.random() > 0.9
 
 var sound = new Audio("media/fight.mp3");
 
-function preload() {
-   // Creative Common license
-   //sound = loadSound("media/fight.mp3");
-}
 
 
 sadFilter.addEventListener("click", playGameOverAnim);
@@ -48,7 +44,6 @@ var myCanvas = createCanvas(1000,800);
 myCanvas.parent('canvas');
 frameRate(5);
 background("#F25757");
-sound = loadSound("media/fight.mp3");
 
 }
 
