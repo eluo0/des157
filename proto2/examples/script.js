@@ -21,7 +21,6 @@ var exit = Math.random() > 0.9
 var sound = new Audio("media/fight.mp3");
 
 
-
 sadFilter.addEventListener("click", playGameOverAnim);
 
 hueFilter.addEventListener('click', hue);
@@ -35,7 +34,6 @@ clear.addEventListener('click', function(){
   reset();
 
 });
-
 
 
 
@@ -86,10 +84,8 @@ function reset(){
   sadOverlay.style.display = "none";
   gameOverY = 700;
   sound.pause();
+
 }
-
-
-
 
 
 function playGameOverAnim(){
@@ -111,10 +107,17 @@ sadOverlay.style.filter="sepia(10%)";
 
   // recursive call back to the same function
   gameOverAnim = requestAnimationFrame(playGameOverAnim);
+  //playsound();
   sound.play();
 
 }
-
+// function playsound(){
+// if(sound.isPlaying() == false){
+// sound.play();
+// }else{
+// sound.stop();
+// }
+// }
 
 
 
@@ -138,6 +141,7 @@ function requestFullScreen() {
   var body = document.querySelector('body');
   // expand section height
   screenSize.style.height = '100%';
+  //screenSize.style.height = '100%';
   fullS.style.display = "none";
   footer.style.display="none";
   nav.style.display="none";
