@@ -3,12 +3,13 @@ var vid_width = vid.width;
 var vid_height = vid.height;
 var overlay = document.getElementById('overlay');
 var overlayCC = overlay.getContext('2d');
+var moodText = document.getElementById('moodText');
 
 /********** check and set up video/webcam **********/
 
 function enablestart() {
   var startbutton = document.getElementById('startbutton');
-  startbutton.value = "Mood Detection";
+  startbutton.value = "MOOD";
   startbutton.disabled = null;
 }
 
@@ -78,6 +79,9 @@ function startVideo() {
   trackingStarted = true;
   // start loop to draw face
   drawLoop();
+  overlay.style.display="block";
+  moodText.style.display="block";
+  emotion_icons.style.display="block";
 }
 
 function drawLoop() {

@@ -1,26 +1,47 @@
 "use strict";
+
 var sadFilter = document.getElementById('sadFilter');
-var overlaySad = document.getElementById('sadOverlay');
+var sadOverlay = document.getElementById('sadOverlay');
+var pageOverlay = document.getElementById("pageOverlay");
+var sectionH = -700;
+var gameOverY = 700;
+var gameOverAnim;
+
 var hueFilter = document.getElementById('hueFilter');
 var clear = document.getElementById('clear');
 var webgl_overlay = document.getElementById('webgl');
+var overlay = document.getElementById("overlay");
+var footer = document.querySelector("footer");
+var nav = document.querySelector("#navigation");
+var webcamHeading = document.querySelector("#webcamHeading");
+var controls = document.querySelector("#controls");
+var emotion_icons = document.querySelector("#emotion_icons");
+var exit = Math.random() > 0.9
 
-sadFilter.addEventListener("click", function(){
-  overlaySad.style.display="block";
-});
+
+
+sadFilter.addEventListener("click", playGameOverAnim);
+
 hueFilter.addEventListener('click', hue);
+
 clear.addEventListener('click', function(){
-  overlaySad.style.display="none";
+  videoel.style.filter="none";
+  ctrack.stop(vid);
+  overlay.style.display="none";
+  moodText.style.display="none";
+  emotion_icons.style.display="none";
+  reset();
+
 });
 
 
 function setup(){
-var myCanvas = createCanvas(900,800);
+var myCanvas = createCanvas(1000,800);
 myCanvas.parent('canvas');
 frameRate(5);
 background("#F25757");
-
 }
+
  function draw(){
    noFill();
    stroke('#424141');
@@ -51,34 +72,110 @@ background("#F25757");
    ellipse(x2, y2,2,2);
   ellipse(dotX-100, dotY-120,2,2);
 }
+
 function mousePressed(){
   background("#F25757");
 }
-function sad(){
-  videoel.style.filter="saturate(4)";
+function reset(){
+  cancelAnimationFrame (gameOverAnim);
+  sadOverlay.style.display = "none";
+  gameOverY = 700;
+
 }
+
+
+
+function playGameOverAnim(){
+  // clear intervals and timeout in case user
+  // resets before timeout is reached
+
+ // turn on game over graphic
+
+  sadOverlay.style.display = "block";
+
+sadOverlay.style.filter="sepia(10%)";
+  // check right edge and move gameOverImg
+  if (gameOverY > sectionH){
+  gameOverY=gameOverY-2;
+  } else {
+    gameOverY = 700;
+  }
+  sadOverlay.style.top = gameOverY + 'px';
+
+  // recursive call back to the same function
+  gameOverAnim = requestAnimationFrame(playGameOverAnim);
+}
+
+
+
 function clearFilter(){
-  videoel.style.filter="none";
+  //videoel.style.filter="none";
   //overlaySad.style.display="none";
+  videoel.style.filter ="none";
+
 }
+
 function hue(){
 videoel.style.filter="hue-rotate(270deg)";
 }
 
 
+var fullS = document.querySelector("#fullscreen");
+var screenSize = document.querySelector("#screenSize");
+fullS.addEventListener("click", requestFullScreen);
 
-onePageScroll(".main", {
-   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 800,             // AnimationTime let you define how long each section takes to animate
-   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-   loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-   keyboard: true,                  // You can activate the keyboard controls
-   responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
-                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-                                    // the browser's width is less than 600, the fallback will kick in.
-});
+function requestFullScreen() {
+  var body = document.querySelector('body');
+  // expand section height
+  screenSize.style.height = '100%';
+  fullS.style.display = "none";
+  footer.style.display="none";
+  nav.style.display="none";
+  //webcamHeading.style.display="none";
+  controls.style.left ="20%";
+  controls.style.top ="87%";
+  vid.width= vid.width*1.3;
+  vid.height=vid.height*1.3;
+
+
+  // going fullscreen. supports most browsers and their versions
+  var requestMethod =
+    body.requestFullScreen ||
+    body.webkitRequestFullScreen ||
+    body.mozRequestFullScreen ||
+    body.msRequestFullScreen;
+
+  if (requestMethod) {
+    // native full screen
+    requestMethod.call(body);
+  } else if (typeof window.ActiveXObject !== "undefined") {
+    // older IE
+    var wscript = new ActiveXObject("WScript.Shell");
+
+    if (wscript !== null) {
+      wscript.SendKeys("{F11}");
+    }
+  }
+}
+
+//  bind a listener to the document for fullscreenchange
+// to reset section height and to show fullScrren button
+document.addEventListener('fullscreenchange', exitHandler);
+document.addEventListener('webkitfullscreenchange', exitHandler);
+document.addEventListener('mozfullscreenchange', exitHandler);
+document.addEventListener('MSFullscreenChange', exitHandler);
+
+function exitHandler() {
+  console.log('exitHandler');
+    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+      vid.width= vid.width*0.77;
+      vid.height=vid.height*0.77;
+      controls.style.top ="75%";
+      controls.style.left ="23%";
+      footer.style.display="block";
+      nav.style.display="block";
+      //webcamHeading.style.display="block";
+      fullS.style.display = 'inline';
+      section.style.height = '320px';
+    }
+}
