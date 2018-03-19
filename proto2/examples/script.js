@@ -116,11 +116,16 @@ sadOverlay.style.filter="sepia(10%)";
 
   // recursive call back to the same function
   gameOverAnim = requestAnimationFrame(playGameOverAnim);
-  sound.play();
+  playsound();
+
 }
-//function playsound(){
-  //sound.play();
-//}
+function playsound(){
+if(!sould.play()){
+sound.play();
+}else{
+sound.stop();
+}
+}
 
 
 
