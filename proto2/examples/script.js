@@ -18,7 +18,7 @@ var controls = document.querySelector("#controls");
 var emotion_icons = document.querySelector("#emotion_icons");
 var exit = Math.random() > 0.9
 
-var sound;
+var sound = new Audio("media/fight.mp3");
 
 function preload() {
    // Creative Common license
@@ -90,7 +90,7 @@ function reset(){
   cancelAnimationFrame (gameOverAnim);
   sadOverlay.style.display = "none";
   gameOverY = 700;
-
+  sound.pause();
 }
 
 
@@ -116,16 +116,10 @@ sadOverlay.style.filter="sepia(10%)";
 
   // recursive call back to the same function
   gameOverAnim = requestAnimationFrame(playGameOverAnim);
-  playsound();
+  sound.play();
 
 }
-function playsound(){
-if(sound.isPlaying() == false){
-sound.play();
-}else{
-sound.stop();
-}
-}
+
 
 
 
