@@ -120,7 +120,7 @@ sadOverlay.style.filter="sepia(10%)";
 
 }
 function playsound(){
-if(!sould.play()){
+if(sould.isPlaying() == false){
 sound.play();
 }else{
 sound.stop();
