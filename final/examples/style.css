@@ -52,7 +52,7 @@ li {
 #webgl{
   position: fixed;
   top: 17.5%;
-  right: 1%;
+  left: 60%;
 }
 #canvas{
   height: 300px;
@@ -103,6 +103,7 @@ left: 100px;
   width: 100px;
   border-radius: 200px;
   background: white;
+  /**font-weight: 700px;**/
   color: black;
 }
 
@@ -177,7 +178,7 @@ left: 100px;
   color: black;
   font-weight: 700;
   margin-left: 21%;
-  margin-top: 0%;
+  margin-top: 2%;
   text-decoration: line-through;
 }
 #page2 h1{
@@ -272,8 +273,17 @@ font-size: 32pt;
 #overlay {
   filter : hue-rotate(90deg); /*IE*/
 position: fixed;
-right: 10px;
-top: 100px;
+left: 60%;
+top: 150px;
+}
+#space{
+  margin-left: 20px;
+}
+#doyoufeel{
+  font-family: 'Open Sans', sans-serif;
+  font-size:18pt;
+  font-weight: bold;
+  padding-left: 8px;
 }
 .button1 {
     background-color: #7FFFD4;
@@ -314,7 +324,7 @@ input[type=button]:hover{
   margin-left: 21%;
   position: fixed;
   top: 17.5%;
-  right: 40%;
+  left: 0%;
 }
 
 #content {
@@ -340,7 +350,7 @@ input[type=button]:hover{
 #emotion_container {
   position: fixed;
   top: 73%;
-  right: 14%;
+  left: 70%;
 }
 
 
@@ -399,7 +409,7 @@ input[type=button]:hover{
 
 }
 input[type=text]{
-  width: 550px;
+  width: 700px;
   height: 300px;
   border: 2px solid white;
   border-radius: 10px;
@@ -445,8 +455,8 @@ margin-top: 15px;
 }
 form{
   position: absolute;
-top: 50%;
-right: 2%;
+top: 52%;
+left: 34.5%;
 transform: translate(-2%, -50%);
 }
 form{

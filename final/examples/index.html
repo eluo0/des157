@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -38,7 +38,7 @@
     </div>
     <ul>
       <li><a href="#page1">home</a></li>
-      <li><a href="#page3">webcam</a></li>
+      <li><a href="#page3">filters</a></li>
       <li><a href="#page2">about</a></li>
       <li><a href="#page4">contact</a></li>
     </ul>
@@ -82,10 +82,8 @@
       </div>
 
       <div id="controls" class="w3-animate-opacity">
-        <input class="btn button1" type="button" value="MOOD" onclick="startVideo()" id="startbutton">
-        <section id="sadOverlay">
-          <img src="media/sad.svg" alt="sad" width="1100" height="800">
-        </section>
+
+          <p id="doyoufeel">Do you feel ?</p>
         <input class="button1" type="button" value="SAD" id="sadFilter">
         <input class="button1" type="button" value="ANXIOUS" id="hueFilter">
         <p id="slowly">Breath Slowly...</p>
@@ -93,8 +91,13 @@
           <p id="in">In & Out</p>
         </div>
 
+        <input class="btn button1" type="button" value="MOOD" onclick="startVideo()" id="startbutton">
+        <section id="sadOverlay">
+          <img src="media/sad.svg" alt="sad" width="1100" height="800">
+        </section>
+
         <input class="otherbutton" type="button" value="CLEAR" id="clear">
-        <input class="otherbutton" type="button" value="FULL" id="fullscreen">
+        <!--<input class="otherbutton" type="button" value="FULL" id="fullscreen">-->
       </div>
 
     </article>
@@ -111,7 +114,7 @@
         <p>
           <h2 class="page2h2">How to use it?</h2>
           <p class="page2p">Each button represents different filter feature. Down below is the instruction of how to use the filters.</p>
-          <h2 class="page2h2">Filter features</h2>
+          <h2 class="page2h2">Filter features <3</h2>
           <h3>MOOD filter</h3>
           <p class="page2p">Detecting your current mood based on current facial expression.</p>
           <h3>SAD filter</h3>
@@ -121,8 +124,10 @@
             a helper for breathing meditation or as many other meditative implements.</p>
           <h3>CLEAR</h3>
           <p class="page2p">This button is for clearing the filter you are currently using.</p>
+          <!--
           <h3>FULL</h3>
           <p class="page2p">This button is to expand the screen size to full screen.</p>
+        -->
     </div>
   </article>
 
@@ -135,13 +140,15 @@
       <h1>CONTACT ME</h1>
       <p>All Questions About Elle Luo</p>
     </div>
+    <!--
       <div id="social">
         <a href="#"><img src="media/twitter.png" alt="twitter" width="66" height="54"></a>
         <a href="#"><img src="media/instagram.png" alt="insta" width="66" height="66"></a>
         <a href="#"><img src="media/facebook.png" alt="facebook" width="55" height="55"></a>
       </div>
+    -->
     </div>
-    <form>
+    <form action="mailto:elluo@ucdavis.edu" method="post" enctype="text/plain">
       Drop me a line :)<br>
       <input type="text" name="block"><br>
       <input class="button" type="submit" value="Submit">

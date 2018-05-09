@@ -3,8 +3,8 @@
 var sadFilter = document.getElementById('sadFilter');
 var sadOverlay = document.getElementById('sadOverlay');
 var pageOverlay = document.getElementById("pageOverlay");
-var sectionH = -700;
-var gameOverY = 700;
+var sectionH = -850;
+var gameOverY = 100;
 var gameOverAnim;
 
 var hueFilter = document.getElementById('hueFilter');
@@ -108,7 +108,7 @@ function mousePressed() {
 function reset() {
   cancelAnimationFrame(gameOverAnim);
   sadOverlay.style.display = "none";
-  gameOverY = 700;
+  gameOverY = 100;
   sound.pause();
 }
 
@@ -125,7 +125,7 @@ function playGameOverAnim() {
   if (gameOverY > sectionH) {
     gameOverY = gameOverY - 2;
   } else {
-    gameOverY = 700;
+    gameOverY = 100;
   }
   sadOverlay.style.top = gameOverY + 'px';
 
