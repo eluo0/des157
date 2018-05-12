@@ -3,7 +3,7 @@
 var sadFilter = document.getElementById('sadFilter');
 var sadOverlay = document.getElementById('sadOverlay');
 var pageOverlay = document.getElementById("pageOverlay");
-var sectionH = -850;
+var sectionH = -1700;
 var gameOverY = 100;
 var gameOverAnim;
 
@@ -28,9 +28,13 @@ var sound = new Audio("media/loop.wav");
 var breathsound = new Audio("media/breath.wav");
 
 var currentPage;
+var isSad= true;
+var isHue=true;
 
-
-sadFilter.addEventListener("click", playGameOverAnim);
+sadFilter.addEventListener("click", function(){
+  //playGameOverAnim();
+  playSad();
+});
 
 hueFilter.addEventListener('click', hue);
 
@@ -43,7 +47,7 @@ clear.addEventListener('click', function() {
   reset();
   breath.style.display = "none";
   slowly.style.display = "none";
-  webgl_overlay.style.border = "none";
+  //webgl_overlay.style.border = "none";
   stopbreath();
 });
 
@@ -121,7 +125,6 @@ function playGameOverAnim() {
   sadOverlay.style.display = "block";
 
   sadOverlay.style.filter = "sepia(10%)";
-  // check right edge and move gameOverImg
   if (gameOverY > sectionH) {
     gameOverY = gameOverY - 2;
   } else {
@@ -135,14 +138,45 @@ function playGameOverAnim() {
 
 }
 
+
+function playSad(){
+  if(isSad){
+    playGameOverAnim();
+    // check right edge and move gameOverImg
+}else{
+  stopMoving();
+
+}
+isSad= !isSad;
+}
+function stopMoving(){
+
+    cancelAnimationFrame(gameOverAnim);
+    sadOverlay.style.display = "none";
+    gameOverY = 100;
+    sound.pause();
+}
+
+
+
 function clearFilter() {
   videoel.style.filter = "none";
 }
 
 function hue() {
+  if(isHue){
+
   slowly.style.display = "block";
   breath.style.display = "block";
   playbreath();
+}else{
+  reset();
+  breath.style.display = "none";
+  slowly.style.display = "none";
+  //webgl_overlay.style.border = "none";
+  stopbreath();
+}
+isHue = !isHue;
 }
 
 
@@ -156,62 +190,62 @@ function playbreath() {
 
 var fullS = document.querySelector("#fullscreen");
 var screenSize = document.querySelector("#screenSize");
-fullS.addEventListener("click", requestFullScreen);
-
-function requestFullScreen() {
-  var body = document.querySelector('body');
-  screenSize.style.height = '100%';
-  fullS.style.display = "none";
-  footer.style.display = "none";
-  nav.style.display = "none";
-  controls.style.left = "20%";
-  controls.style.top = "87%";
-  emotionContainer.style.top="83%";
-  vid.width = vid.width * 1.3;
-  vid.height = vid.height * 1.3;
-  webgl_overlay.height= vid.height*0.95;
-
-
-
-  // going fullscreen. supports most browsers and their versions
-  var requestMethod =
-    body.requestFullScreen ||
-    body.webkitRequestFullScreen ||
-    body.mozRequestFullScreen ||
-    body.msRequestFullScreen;
-
-  if (requestMethod) {
-    // native full screen
-    requestMethod.call(body);
-  } else if (typeof window.ActiveXObject !== "undefined") {
-    // older IE
-    var wscript = new ActiveXObject("WScript.Shell");
-
-    if (wscript !== null) {
-      wscript.SendKeys("{F11}");
-    }
-  }
-}
-
-//  bind a listener to the document for fullscreenchange
-// to reset section height and to show fullScrren button
-document.addEventListener('fullscreenchange', exitHandler);
-document.addEventListener('webkitfullscreenchange', exitHandler);
-document.addEventListener('mozfullscreenchange', exitHandler);
-document.addEventListener('MSFullscreenChange', exitHandler);
-
-function exitHandler() {
-  console.log('exitHandler');
-  if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-    vid.width = vid.width * 0.77;
-    vid.height = vid.height * 0.77;
-    webgl_overlay.height= vid.height;
-    controls.style.top = "75%";
-    controls.style.left = "23%";
-    footer.style.display = "block";
-    nav.style.display = "block";
-    fullS.style.display = 'inline';
-    //section.style.height = '320px';
-    emotionContainer.style.top="73%";
-  }
-}
+// fullS.addEventListener("click", requestFullScreen);
+//
+// function requestFullScreen() {
+//   var body = document.querySelector('body');
+//   screenSize.style.height = '100%';
+//   fullS.style.display = "none";
+//   footer.style.display = "none";
+//   nav.style.display = "none";
+//   controls.style.left = "20%";
+//   controls.style.top = "87%";
+//   emotionContainer.style.top="83%";
+//   vid.width = vid.width * 1.3;
+//   vid.height = vid.height * 1.3;
+//   webgl_overlay.height= vid.height*0.95;
+//
+//
+//
+//   // going fullscreen. supports most browsers and their versions
+//   var requestMethod =
+//     body.requestFullScreen ||
+//     body.webkitRequestFullScreen ||
+//     body.mozRequestFullScreen ||
+//     body.msRequestFullScreen;
+//
+//   if (requestMethod) {
+//     // native full screen
+//     requestMethod.call(body);
+//   } else if (typeof window.ActiveXObject !== "undefined") {
+//     // older IE
+//     var wscript = new ActiveXObject("WScript.Shell");
+//
+//     if (wscript !== null) {
+//       wscript.SendKeys("{F11}");
+//     }
+//   }
+// }
+//
+// //  bind a listener to the document for fullscreenchange
+// // to reset section height and to show fullScrren button
+// document.addEventListener('fullscreenchange', exitHandler);
+// document.addEventListener('webkitfullscreenchange', exitHandler);
+// document.addEventListener('mozfullscreenchange', exitHandler);
+// document.addEventListener('MSFullscreenChange', exitHandler);
+//
+// function exitHandler() {
+//   console.log('exitHandler');
+//   if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+//     vid.width = vid.width * 0.77;
+//     vid.height = vid.height * 0.77;
+//     webgl_overlay.height= vid.height;
+//     controls.style.top = "75%";
+//     controls.style.left = "23%";
+//     footer.style.display = "block";
+//     nav.style.display = "block";
+//     fullS.style.display = 'inline';
+//     //section.style.height = '320px';
+//     emotionContainer.style.top="73%";
+//   }
+// }

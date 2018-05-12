@@ -54,6 +54,14 @@ li {
   top: 17.5%;
   left: 60%;
 }
+#border{
+  border: 2px dotted;
+  border-color: #8be8e3;
+  position: absolute;
+  left: 1200px;
+  top: 180px;
+}
+
 #canvas{
   height: 300px;
   width: 900px;
@@ -66,23 +74,23 @@ li {
   left: 3%;
 }
 #sadOverlay{
-position: fixed;
+position: relative;
 display: none;
-z-index: 1;
-top: 600px;
-left: 100px;
+z-index: 5;
+top: 0px;
+left: 0px;
 }
 #breath{
   display: none;
   position: fixed;
-  top: 40%;
-  right: 13%;
+  top: 30%;
+  right: 19%;
 }
 #slowly{
   position: fixed;
   width: 400px;
-  top: 30%;
-  right: 120px;
+  top: 20%;
+  right: 310px;
   font-weight: 700;
   font-family: 'Nothing You Could Do', cursive;
   font-size: 17pt;
@@ -129,6 +137,9 @@ left: 100px;
   top:30%;
   left: 7%;
 
+}
+#navigation ul{
+  margin-top: 13px;
 }
 #navigation li{
   padding-bottom: 20px;
@@ -177,7 +188,7 @@ left: 100px;
   font-size: 17pt;
   color: black;
   font-weight: 700;
-  margin-left: 21%;
+  margin-left: 30%;
   margin-top: 2%;
   text-decoration: line-through;
 }
@@ -185,22 +196,23 @@ left: 100px;
   font-size: 34pt;
   font-weight: 700;
   color: #7FFFD4;
-  margin-left: 21%;
+  margin-left: 30%;
+  margin-top: 5%;
 }
 #aboutHR{
   border-style: solid;
   border-color: black;
   border-width: 2px;
   width: 27%;
-  margin-left: 21%;
+  margin-left: 30%;
   margin-bottom: 2px;
   margin-top: -15px;
 }
 .page2p{
-  margin-left: 21%;
+  margin-left: 30%;
   font-weight: 500;
   margin-top: .5%;
-  width: 60%;
+  width: 50%;
   font-size: 12pt;
   line-height: 20px;
 }
@@ -208,11 +220,15 @@ left: 100px;
 text-decoration: none;
 }
 #page2 h3{
-  margin-left: 21%;
+  margin-left: 30%;
   font-size:13pt;
   font-weight: 600;
 color: black;
 margin-top: 1%;
+}
+#email{
+  font-weight: 600;
+  font-size: 50pt;
 }
 #page3hr{
   border-style: solid;
@@ -280,12 +296,16 @@ top: 150px;
   margin-left: 20px;
 }
 #doyoufeel{
+  position: relative;
   font-family: 'Open Sans', sans-serif;
   font-size:18pt;
   font-weight: bold;
   padding-left: 8px;
+  left: 185px;
 }
 .button1 {
+  position: relative;
+  left: 175px;
     background-color: #7FFFD4;
     border: none;
     border-radius: 10%;
@@ -297,10 +317,12 @@ top: 150px;
     height: 50px;
     cursor: pointer;
     text-align: center;
+    z-index: 6;
 }
-.otherbutton{
+#otherbutton{
   position: relative;
-  left: 40px;
+bottom: 100px;
+  left: 1000px;
 background-color: #fcf8c2;
 border: none;
 border-radius: 50%;
@@ -312,6 +334,15 @@ width:72px;
 height: 72px;
 cursor: pointer;
 text-align: center;
+  z-index: 6;
+  font-weight: 600;
+}
+#watch{
+  position: relative;
+  bottom: 100px;
+  left: 950px;
+  font-size: 17pt;
+  font-weight: 600;
 }
 input[type=button]:hover{
   background-color: white;
@@ -349,8 +380,8 @@ input[type=button]:hover{
 
 #emotion_container {
   position: fixed;
-  top: 73%;
-  left: 70%;
+  top: 74.2%;
+  left: 83%;
 }
 
 
@@ -395,7 +426,7 @@ input[type=button]:hover{
   margin-left: 41%;
 }
 #moodText{
-  font-size: 15pt;
+  font-size: 19pt;
   font-weight: 700;
   display: none;
 }
@@ -409,7 +440,7 @@ input[type=button]:hover{
 
 }
 input[type=text]{
-  width: 700px;
+  width: 1000px;
   height: 300px;
   border: 2px solid white;
   border-radius: 10px;

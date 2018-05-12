@@ -38,7 +38,7 @@
     </div>
     <ul>
       <li><a href="#page1">home</a></li>
-      <li><a href="#page3">filters</a></li>
+      <li><a href="#page3">interact</a></li>
       <li><a href="#page2">about</a></li>
       <li><a href="#page4">contact</a></li>
     </ul>
@@ -50,7 +50,7 @@
     <header id="header">
       <h1 id="mooder">Mooder</h1>
       <hr id="mooderhr10">
-      <p>A mood filter website that treat people with stress and help them feel better about themselves. This project targets mental health and helps prevent stress disorders.</p>
+      <p>A mood filter website that treats people with stress and helps them feel better about themselves. This project targets mental health and helps prevent stress disorders.</p>
       <p>ELLE LUO <br> DESIGNER | ARTIST | DEVELOPER</p>
     </header>
   </article>
@@ -67,8 +67,9 @@
     </video>
         <canvas id="overlay" width="500" height="400"></canvas>
         <canvas id="webgl" width="500" height="400"></canvas>
-      </div>
 
+      </div>
+      <canvas id="border" width="500" height="400"></canvas>
       <div id="emotion_container">
         <p id="moodText">Current Mood </p>
         <p> </p>
@@ -83,7 +84,7 @@
 
       <div id="controls" class="w3-animate-opacity">
 
-          <p id="doyoufeel">Do you feel ?</p>
+          <p id="doyoufeel">DO YOU FEEL?</p>
         <input class="button1" type="button" value="SAD" id="sadFilter">
         <input class="button1" type="button" value="ANXIOUS" id="hueFilter">
         <p id="slowly">Breath Slowly...</p>
@@ -91,12 +92,16 @@
           <p id="in">In & Out</p>
         </div>
 
-        <input class="btn button1" type="button" value="MOOD" onclick="startVideo()" id="startbutton">
+        <div id="watchyour">
+        <p id="watch">WATCH YOUR</p>
+        <input id="otherbutton" type="button" value="MOOD" onclick="startVideo()" id="startbutton">
+      </div>
+
         <section id="sadOverlay">
           <img src="media/sad.svg" alt="sad" width="1100" height="800">
         </section>
 
-        <input class="otherbutton" type="button" value="CLEAR" id="clear">
+        <!--<input class="otherbutton" type="button" value="CLEAR" id="clear">-->
         <!--<input class="otherbutton" type="button" value="FULL" id="fullscreen">-->
       </div>
 
@@ -139,6 +144,7 @@
       <div id="contactme">
       <h1>CONTACT ME</h1>
       <p>All Questions About Elle Luo</p>
+      <p id="email">Email: elluo@ucdavis.edu</p>
     </div>
     <!--
       <div id="social">
@@ -148,11 +154,12 @@
       </div>
     -->
     </div>
+    <!--
     <form action="mailto:elluo@ucdavis.edu" method="post" enctype="text/plain">
       Drop me a line :)<br>
       <input type="text" name="block"><br>
       <input class="button" type="submit" value="Submit">
-    </form>
+    </form>-->
   </article>
 
   <footer>

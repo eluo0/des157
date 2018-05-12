@@ -4,6 +4,7 @@ var vid_height = vid.height;
 var overlay = document.getElementById('overlay');
 var overlayCC = overlay.getContext('2d');
 var moodText = document.getElementById('moodText');
+var isMood = true;
 
 /********** check and set up video/webcam **********/
 
@@ -11,7 +12,9 @@ function enablestart() {
   var startbutton = document.getElementById('startbutton');
   startbutton.value = "MOOD";
   startbutton.disabled = null;
+
 }
+
 
 function adjustVideoProportions() {
   // resize overlay and video if proportions are different
@@ -72,6 +75,7 @@ ctrack.init(pModel);
 var trackingStarted = false;
 
 function startVideo() {
+  if(isMood){
   // start video
   vid.play();
   // start tracking
@@ -82,8 +86,14 @@ function startVideo() {
   overlay.style.display="block";
   moodText.style.display="block";
   emotion_icons.style.display="block";
-  webgl_overlay.style.border = "dotted";
-  webgl_overlay.style.borderColor = "#8be8e3";
+} else{
+  overlay.style.display="none";
+  moodText.style.display="none";
+  emotion_icons.style.display="none";
+}
+isMood = !isMood;
+  //webgl_overlay.style.border = "dotted";
+  //webgl_overlay.style.borderColor = "#8be8e3";
 }
 
 function drawLoop() {
